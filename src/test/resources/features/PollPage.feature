@@ -3,7 +3,7 @@
    Agile Story: As a user,I  should be able to create a  poll by clicking on Poll tab under Active Stream
 
       Scenario: User should be login
-      Given the user should be login page
+      Given the user is on the login page
       When  the user enters the username and password
       Then  the user navigates to the home page
 

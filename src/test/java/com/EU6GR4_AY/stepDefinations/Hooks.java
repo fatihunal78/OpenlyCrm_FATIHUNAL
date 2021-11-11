@@ -29,7 +29,16 @@ public class Hooks {
         Driver.closeDriver();
 
     }
+    @Before("@abc")
+    public void setUpdb(){
+        System.out.println("\tconnecting to database...");
+    }
 
+    @After("@abc")
+    public void closeDb(){
+        System.out.println("\tdisconnecting to database...");
+
+    }
 
 
 

@@ -1,6 +1,6 @@
 
 Feature: Login  As a user should be able to login
-
+@wip
   Scenario Outline: Login with different valid credentials
     Given the user is on the login page
     When the user enters "<username>" and "<password>"
