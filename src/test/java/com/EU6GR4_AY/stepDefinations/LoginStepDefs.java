@@ -35,6 +35,23 @@ public class LoginStepDefs extends BasePage {
         Assert.assertTrue(Driver.get().getTitle().contains(expectedTitle));
 
     }
+
+    @When("the user enters by using {string} and {string}")
+    public void theUserEntersByUsingAnd(String Username, String Password) {
+        loginPage.login(Username, Password);
+    }
+
+    @Then("the should not be on home page")
+    public void theShouldNotBeOnHomePage() {
+        String expectedTitle = "Portal";
+        System.out.println("expectedTitle = " + expectedTitle);
+        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
+        BrowserUtils.waitFor(2);
+        Assert.assertFalse(Driver.get().getTitle().contains(expectedTitle));
+
+
+
+    }
 }
 
 
