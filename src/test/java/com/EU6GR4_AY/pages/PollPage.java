@@ -61,4 +61,10 @@ public class PollPage extends BasePage {
 
     @FindBy(xpath = "//a[@class='bx-finder-company-department-employee  bx-finder-element'][23]")
     public WebElement ThirdUser;
+
+    @FindBy(xpath = "/html/body/a")
+
+    public WebElement AttachedText;
+
 }
+

@@ -11,6 +11,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -41,11 +46,7 @@ public class PollPageStepsDefs extends BasePage {
         pollPage.NewDepBtn.click();
     }
 
-    @And("the user clicks the All department and subdepartment employees")
-    public void theUserClicksTheAllDepartmentAndSubdepartmentEmployees() {
 
-
-    }
 
     @And("the user clicks the first user")
     public void theUserClicksTheFirstUser() {
@@ -95,12 +96,14 @@ public class PollPageStepsDefs extends BasePage {
          pollPage.saveBtn.click();
     }
 
-    @Then("link text is seen in the message field")
-    public void linkTextIsSeenInTheMessageField() {
-        BrowserUtils.waitFor(2);
-        System.out.println("pollPage.msgBox.getText() = " + pollPage.msgBox.getText());
+   // @Then("link text is seen in the message field")
+    //public void linkTextIsSeenInTheMessageField() {
+     //   BrowserUtils.waitFor(2);
+     //   pollPage.msgBox.click();
+    //    System.out.println("pollPage.msgBox.isDisplayed() = " + pollPage.msgBox.isDisplayed());
 
-    }
+
+  //  }
 
     @When("the user clicks Add mention icon")
     public void theUserClicksAddMentionIcon() {
@@ -129,5 +132,17 @@ public class PollPageStepsDefs extends BasePage {
         Thread.sleep(2000);
         System.out.println("pollPage.receiverBox.getText() = " + pollPage.receiverBox.getText());
 
+    }
+
+   // @Then("attached link text is seen in the message field")
+   // public void attachedLinkTextIsSeenInTheMessageField() {
+
+    //    System.out.println("pollPage.Attacdentext.getText() = " + pollPage.AttachedText.getAttribute("value"));
+  //  }
+
+    @Then("{string} link text is seen in the message field")
+    public void linkTextIsSeenInTheMessageField(String arg0) {
+       // new WebDriverWait(Driver.get(), 20).until(ExpectedConditions.textToBePresentInElementValue(pollPage.AttachedText,"Hello World"));
+        System.out.println("pollPage.Attacdentext.getText() = " + pollPage.AttachedText.getText());
     }
 }

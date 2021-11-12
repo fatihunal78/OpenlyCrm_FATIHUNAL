@@ -29,7 +29,7 @@
         And   the user writes the link text in the Text box
         And   the user writes the link url in the Link box
         And   the user clicks the Save button
-        Then  link text is seen in the message field
+        Then  "cybertekschool.com" link text is seen in the message field
 
     @wip
       Scenario:  add the mention by clicking the add mention icon
