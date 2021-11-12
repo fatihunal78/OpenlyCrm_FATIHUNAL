@@ -3,12 +3,14 @@ package com.EU6GR4_AY.stepDefinations;
 import com.EU6GR4_AY.pages.BasePage;
 import com.EU6GR4_AY.pages.LoginPage;
 import com.EU6GR4_AY.pages.PollPage;
+import com.EU6GR4_AY.utilities.BrowserUtils;
 import com.EU6GR4_AY.utilities.ConfigurationReader;
 import com.EU6GR4_AY.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 import java.util.concurrent.TimeUnit;
 
@@ -68,5 +70,34 @@ public class PollPageStepsDefs extends BasePage {
     }
 
 
+    @Then("the user clicks the link icon")
+    public void theUserClicksTheLinkIcon() {
+         pollPage.linkBtn.click();
 
+    }
+
+
+    @And("the user writes the link text in the Text box")
+    public void theUserWritesTheLinkTextInTheTextBox() {
+         pollPage.textBox.sendKeys("Hello World");
+    }
+
+    @And("the user writes the link url in the Link box")
+    public void theUserWritesTheLinkUrlInTheLinkBox() {
+         pollPage.linkBox.sendKeys("cybertekschool.com");
+    }
+
+    @And("the user clicks the Save button")
+    public void theUserClicksTheSaveButton() {
+         pollPage.saveBtn.click();
+    }
+
+    @Then("link text is seen in the message field")
+    public void linkTextIsSeenInTheMessageField() {
+       String expectedText = "Hello World";
+       pollPage.msgBox.getText().contains("Hello World");
+       System.out.println("expectedText = " + expectedText);
+       BrowserUtils.waitFor(2);
+        Assert.assertTrue(pollPage.msgBox.getText().contains("Hello World"));
+    }
 }

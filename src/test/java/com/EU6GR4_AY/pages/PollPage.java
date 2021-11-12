@@ -1,5 +1,6 @@
 package com.EU6GR4_AY.pages;
 
+import com.EU6GR4_AY.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -33,5 +34,21 @@ public class PollPage extends BasePage {
 
     @FindBy(id = "feed-add-post-destination-item")
     public WebElement receiverBox;
+
+    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-link']")
+    public WebElement linkBtn;
+
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
+    public WebElement textBox;
+
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-href")
+    public WebElement linkBox;
+
+    @FindBy(id = "undefined")
+    public WebElement saveBtn;
+
+    @FindBy(xpath = "/html/body[@contenteditable='true']")
+    public WebElement msgBox;
+
 
 }

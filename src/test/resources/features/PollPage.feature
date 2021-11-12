@@ -7,11 +7,11 @@
         Given the user is on the login page
         When the user enters by using "helpdesk76@cybertekschool.com" and "UserUser"
         Then the user should be on the home page
+        Then the user should click the poll button
 
-    @poll
     Scenario: Add users by selecting multiple contacts from Employee and Departments contact lists
 
-      When the user should click the poll button
+
       Then the user clicks the Add More button
       And  the user clicks the Employees and departments
       And  the user clicks the new department's name
@@ -21,10 +21,9 @@
       And the user clicks the third user
       Then clicked users are seen in the receiver box filed
 
-
+    @poll
       Scenario: attach a link by clicking on the link icon
-        Given the user navigates to the home page
-        When the user should click the poll button
+
         Then  the user clicks the link icon
         And   the user writes the link text in the Text box
         And   the user writes the link url in the Link box
