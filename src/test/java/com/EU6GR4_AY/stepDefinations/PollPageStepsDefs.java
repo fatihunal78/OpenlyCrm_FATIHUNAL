@@ -75,17 +75,17 @@ public class PollPageStepsDefs extends BasePage {
          pollPage.linkBtn.click();
 
     }
-
+    @And("the user writes the link url in the Link box")
+    public void theUserWritesTheLinkUrlInTheLinkBox() {
+        pollPage.linkBox.sendKeys("cybertekschool.com");
+    }
 
     @And("the user writes the link text in the Text box")
     public void theUserWritesTheLinkTextInTheTextBox() {
+        BrowserUtils.waitFor(2);
          pollPage.textBox.sendKeys("Hello World");
     }
 
-    @And("the user writes the link url in the Link box")
-    public void theUserWritesTheLinkUrlInTheLinkBox() {
-         pollPage.linkBox.sendKeys("cybertekschool.com");
-    }
 
     @And("the user clicks the Save button")
     public void theUserClicksTheSaveButton() {
@@ -94,10 +94,8 @@ public class PollPageStepsDefs extends BasePage {
 
     @Then("link text is seen in the message field")
     public void linkTextIsSeenInTheMessageField() {
-       String expectedText = "Hello World";
-       pollPage.msgBox.getText().contains("Hello World");
-       System.out.println("expectedText = " + expectedText);
-       BrowserUtils.waitFor(2);
-        Assert.assertTrue(pollPage.msgBox.getText().contains("Hello World"));
+        BrowserUtils.waitFor(2);
+        System.out.println("pollPage.msgBox.getText() = " + pollPage.msgBox.getText());
+
     }
 }

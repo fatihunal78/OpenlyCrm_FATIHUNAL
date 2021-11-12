@@ -47,7 +47,7 @@ public class PollPage extends BasePage {
     @FindBy(id = "undefined")
     public WebElement saveBtn;
 
-    @FindBy(xpath = "/html/body[@contenteditable='true']")
+    @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
     public WebElement msgBox;
 
 
