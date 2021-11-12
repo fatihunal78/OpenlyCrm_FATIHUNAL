@@ -9,8 +9,9 @@
         Then the user should be on the home page
         Then the user should click the poll button
 
-    Scenario: Add users by selecting multiple contacts from Employee and Departments contact lists
 
+
+    Scenario: Add users by selecting multiple contacts from Employee and Departments contact lists
 
       Then the user clicks the Add More button
       And  the user clicks the Employees and departments
@@ -21,7 +22,7 @@
       And the user clicks the third user
       Then clicked users are seen in the receiver box filed
 
-    @poll
+
       Scenario: attach a link by clicking on the link icon
 
         Then  the user clicks the link icon
@@ -30,15 +31,19 @@
         And   the user clicks the Save button
         Then  link text is seen in the message field
 
-
+    @poll
       Scenario:  add the mention by clicking the add mention icon
 
-        Given the user navigates to the home page
-        When the user should click the poll button
-        And   the user clicks Add mention icon
-        And   the user clicks on the Employee and departments
-        And   the user clicks the hr76@cybertekschool.com
-        Then  clicked user is seen in the receiver "To" filed
+        When  the user clicks Add mention icon
+        And  the user clicks the Employees and departments
+        And the user selects the first user
+        And the user clicks Add mention icon
+        And the user clicks the Employees and departments
+        And the user selects the second user
+        And the user clicks Add mention icon
+        And the user clicks the Employees and departments
+        And the user selects the third user
+        Then selected users are seen in the receiver box filed
 
         Scenario: add questions and multiple answers
 

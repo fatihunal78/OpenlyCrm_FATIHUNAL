@@ -54,12 +54,14 @@ public class PollPageStepsDefs extends BasePage {
 
     @And("the user clicks the second user")
     public void theUserClicksTheSecondUser() {
+       BrowserUtils.waitFor(2);
         pollPage.secondUser.click();
     }
 
     @And("the user clicks the third user")
     public void theUserClicksTheThirdUser() {
-        pollPage.thirdUser.click();
+        BrowserUtils.waitFor(2);
+         pollPage.thirdUser.click();
     }
 
     @Then("clicked users are seen in the receiver box filed")
@@ -96,6 +98,35 @@ public class PollPageStepsDefs extends BasePage {
     public void linkTextIsSeenInTheMessageField() {
         BrowserUtils.waitFor(2);
         System.out.println("pollPage.msgBox.getText() = " + pollPage.msgBox.getText());
+
+    }
+
+    @When("the user clicks Add mention icon")
+    public void theUserClicksAddMentionIcon() {
+         pollPage.AddMenIcon.click();
+
+    }
+
+    @And("the user selects the first user")
+    public void theUserSelectsTheFirstUser() {
+        pollPage.FirstUser.click();
+    }
+
+    @And("the user selects the second user")
+    public void theUserSelectsTheSecondUser() {
+        BrowserUtils.waitFor(2);
+       pollPage.secondUser.click();
+    }
+
+    @And("the user selects the third user")
+    public void theUserSelectsTheThirdUser() {
+         pollPage.ThirdUser.click();
+    }
+
+    @Then("selected users are seen in the receiver box filed")
+    public void selectedUsersAreSeenInTheReceiverBoxFiled() throws InterruptedException {
+        Thread.sleep(2000);
+        System.out.println("pollPage.receiverBox.getText() = " + pollPage.receiverBox.getText());
 
     }
 }

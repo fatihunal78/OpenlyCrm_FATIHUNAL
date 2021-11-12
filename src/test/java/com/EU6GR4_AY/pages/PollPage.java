@@ -22,13 +22,13 @@ public class PollPage extends BasePage {
     @FindBy(xpath ="//*[@id=\"bx-lm-box-last-content\"]/table/tr/td/div[2]/div[2]/div[6]/a/span/div[2]" )
     public WebElement AllDepAndSubEmpBtn;
 
-    @FindBy(xpath = "(//a[@class='bx-finder-company-department-employee  bx-finder-element'])[5]")
+    @FindBy(xpath = "(//a[@class='bx-finder-company-department-employee  bx-finder-element'])[11]")
     public WebElement firstUSer;
 
-    @FindBy(xpath = "(//a[@class='bx-finder-company-department-employee  bx-finder-element'])[3]")
+    @FindBy(xpath = "(//a[@class='bx-finder-company-department-employee  bx-finder-element'])[8]")
     public WebElement secondUser;
 
-    @FindBy(xpath = "(//a[@class='bx-finder-company-department-employee  bx-finder-element'])[6]")
+    @FindBy(xpath = "(//a[@class='bx-finder-company-department-employee  bx-finder-element'])[4]")
     public WebElement thirdUser;
 
 
@@ -50,5 +50,15 @@ public class PollPage extends BasePage {
     @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
     public WebElement msgBox;
 
+    @FindBy(id = "bx-b-mention-blogPostForm")
+    public WebElement AddMenIcon;
 
+    @FindBy(xpath = "//a[@class='bx-finder-company-department-employee  bx-finder-element'][3]")
+    public WebElement FirstUser;
+
+    @FindBy(xpath = "//a[@class='bx-finder-company-department-employee  bx-finder-element'][11]")
+    public WebElement SecondUser;
+
+    @FindBy(xpath = "//a[@class='bx-finder-company-department-employee  bx-finder-element'][23]")
+    public WebElement ThirdUser;
 }
