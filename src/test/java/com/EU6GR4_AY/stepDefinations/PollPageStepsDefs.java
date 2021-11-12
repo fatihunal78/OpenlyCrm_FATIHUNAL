@@ -46,7 +46,11 @@ public class PollPageStepsDefs extends BasePage {
         pollPage.NewDepBtn.click();
     }
 
+    @And("the user clicks the All department and subdepartment employees")
+    public void theUserClicksTheAllDepartmentAndSubdepartmentEmployees() {
 
+         pollPage.AllDepAndSubEmpBtn.click();
+    }
 
     @And("the user clicks the first user")
     public void theUserClicksTheFirstUser() {
@@ -96,14 +100,6 @@ public class PollPageStepsDefs extends BasePage {
          pollPage.saveBtn.click();
     }
 
-   // @Then("link text is seen in the message field")
-    //public void linkTextIsSeenInTheMessageField() {
-     //   BrowserUtils.waitFor(2);
-     //   pollPage.msgBox.click();
-    //    System.out.println("pollPage.msgBox.isDisplayed() = " + pollPage.msgBox.isDisplayed());
-
-
-  //  }
 
     @When("the user clicks Add mention icon")
     public void theUserClicksAddMentionIcon() {
@@ -127,22 +123,26 @@ public class PollPageStepsDefs extends BasePage {
          pollPage.ThirdUser.click();
     }
 
-    @Then("selected users are seen in the receiver box filed")
-    public void selectedUsersAreSeenInTheReceiverBoxFiled() throws InterruptedException {
-        Thread.sleep(2000);
-        System.out.println("pollPage.receiverBox.getText() = " + pollPage.receiverBox.getText());
+
+    @And("the user clicks the SEND button")
+    public void theUserClicksTheSENDButton() {
+         pollPage.SendBtn.click();
+
 
     }
 
-   // @Then("attached link text is seen in the message field")
-   // public void attachedLinkTextIsSeenInTheMessageField() {
+    @Then("link text is seen on the Active Stream page")
+    public void linkTextIsSeenNTheActiveStreamPage() {
 
-    //    System.out.println("pollPage.Attacdentext.getText() = " + pollPage.AttachedText.getAttribute("value"));
-  //  }
+         String expectedText="Hello World";
 
-    @Then("{string} link text is seen in the message field")
-    public void linkTextIsSeenInTheMessageField(String arg0) {
-       // new WebDriverWait(Driver.get(), 20).until(ExpectedConditions.textToBePresentInElementValue(pollPage.AttachedText,"Hello World"));
-        System.out.println("pollPage.Attacdentext.getText() = " + pollPage.AttachedText.getText());
+         String actualText= pollPage.AttachedText.getText();
+
+         Assert.assertEquals(expectedText,actualText);
+
+
+        System.out.println("pollPage.AttachedText.getText() = " + pollPage.AttachedText.getText());
     }
+
+
 }

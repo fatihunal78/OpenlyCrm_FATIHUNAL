@@ -1,6 +1,7 @@
 package com.EU6GR4_AY.pages;
 
 import com.EU6GR4_AY.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -62,9 +63,10 @@ public class PollPage extends BasePage {
     @FindBy(xpath = "//a[@class='bx-finder-company-department-employee  bx-finder-element'][23]")
     public WebElement ThirdUser;
 
-    @FindBy(xpath = "/html/body/a")
+    @FindBy(id = "blog-submit-button-save")
+    public WebElement SendBtn;
 
+   @FindBy(xpath = "//div[@class='feed-post-text-block-inner-inner'][1]")
     public WebElement AttachedText;
-
 }
 

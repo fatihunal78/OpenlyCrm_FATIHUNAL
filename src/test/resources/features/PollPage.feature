@@ -10,7 +10,7 @@
         Then the user should click the poll button
 
 
-
+    @wip
     Scenario: Add users by selecting multiple contacts from Employee and Departments contact lists
 
       Then the user clicks the Add More button
@@ -22,14 +22,15 @@
       And the user clicks the third user
       Then clicked users are seen in the receiver box filed
 
-    @aaa
+    @wip
       Scenario: attach a link by clicking on the link icon
 
         Then  the user clicks the link icon
         And   the user writes the link text in the Text box
         And   the user writes the link url in the Link box
         And   the user clicks the Save button
-        Then  "cybertekschool.com" link text is seen in the message field
+        And   the user clicks the SEND button
+        Then  link text is seen on the Active Stream page
 
     @wip
       Scenario:  add the mention by clicking the add mention icon
@@ -43,7 +44,7 @@
         And the user clicks Add mention icon
         And the user clicks the Employees and departments
         And the user selects the third user
-        Then selected users are seen in the receiver box filed
+        Then clicked users are seen in the receiver box filed
 
         Scenario: add questions and multiple answers
 
