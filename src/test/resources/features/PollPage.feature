@@ -2,21 +2,23 @@
   Feature: Add the Users
    Agile Story: As a user,I  should be able to create a  poll by clicking on Poll tab under Active Stream
 
-      Scenario: User should be login
-      Given the user is on the login page
-      When  the user enters the username and password
-      Then  the user navigates to the home page
 
+   Background:
+        Given the user is on the login page
+        When the user enters by using "helpdesk76@cybertekschool.com" and "UserUser"
+        Then the user should be on the home page
 
+    @poll
     Scenario: Add users by selecting multiple contacts from Employee and Departments contact lists
 
-      Given the user navigates to the home page
       When the user should click the poll button
       Then the user clicks the Add More button
       And  the user clicks the Employees and departments
       And  the user clicks the new department's name
-      And  the user clicks the all department employees
-      And  the user clicks the hr76@cybertekschool.com
+      And the user clicks the All department and subdepartment employees
+      And the user clicks the first user
+      And the user clicks the second user
+      And the user clicks the third user
       Then clicked users are seen in the receiver box filed
 
 

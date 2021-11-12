@@ -10,54 +10,63 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.concurrent.TimeUnit;
+
 public class PollPageStepsDefs extends BasePage {
     PollPage pollPage= new PollPage();
 
- //   @Given("the user should be on the home page")
-  //  public void theUserShouldBeOnTheHomePage() {
-  //      String url = ConfigurationReader.get("url");
-  //      Driver.get().get(url);
-
-//    }
-
-    @When("the user should click the poll button")
+     @When("the user should click the poll button")
     public void theUserShouldClickThePollButton() {
         pollPage.pollBtn.click();
     }
 
     @Then("the user clicks the Add More button")
     public void theUserClicksTheAddMoreButton() {
-    pollPage.AddMoreBtn.click();
+        Driver.get().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+         pollPage.AddMoreBtn.click();
 
     }
     @And("the user clicks the Employees and departments")
-    public void theUserClicksTheEmployeesAndDepartments() {
-        pollPage.EmpDepBtn.click();
+    public void theUserClicksTheEmployeesAndDepartments() throws InterruptedException {
+        Thread.sleep(2000);
+         pollPage.EmpDepBtn.click();
     }
 
     @And("the user clicks the new department's name")
-    public void theUserClicksTheNewDepartmentSName() {
+    public void theUserClicksTheNewDepartmentSName() throws InterruptedException {
+        Thread.sleep(2000);
         pollPage.NewDepBtn.click();
     }
 
-    @And("the user clicks the all department employees")
-    public void theUserClicksTheAllDepartmentEmployees() {
-        pollPage.AllDepAndSubDepEmplBtn.click();
+    @And("the user clicks the All department and subdepartment employees")
+    public void theUserClicksTheAllDepartmentAndSubdepartmentEmployees() {
+
 
     }
 
+    @And("the user clicks the first user")
+    public void theUserClicksTheFirstUser() {
+        pollPage.firstUSer.click();
 
-    @And("the user clicks the hr{int}@cybertekschool.com")
-    public void theUserClicksTheHrCybertekschoolCom(int arg0) {
-        pollPage.hr76.click();
+    }
 
+    @And("the user clicks the second user")
+    public void theUserClicksTheSecondUser() {
+        pollPage.secondUser.click();
+    }
+
+    @And("the user clicks the third user")
+    public void theUserClicksTheThirdUser() {
+        pollPage.thirdUser.click();
     }
 
     @Then("clicked users are seen in the receiver box filed")
-    public void clickedUsersAreSeenInTheReceiverBoxFiled() {
-        pollPage.receiverBox.getText();
+    public void clickedUsersAreSeenInTheReceiverBoxFiled() throws InterruptedException {
+        Thread.sleep(2000);
+        System.out.println("pollPage.receiverBox.getText() = " + pollPage.receiverBox.getText());
 
     }
+
 
 
 }
