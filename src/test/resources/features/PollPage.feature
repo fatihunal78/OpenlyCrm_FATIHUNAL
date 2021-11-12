@@ -47,9 +47,8 @@
 
         Scenario: add questions and multiple answers
 
-          Given the user navigates to the home page
-          When the user should click the poll button
-          And the user writes a question in the Question box
+
+          When  nine the user writes a question in the Question box
           And the user writes an answer in the Answer 1 box
           And the user writes another answer in the Answer 2 box
           And the user writes another answer in the Answer 3 box
