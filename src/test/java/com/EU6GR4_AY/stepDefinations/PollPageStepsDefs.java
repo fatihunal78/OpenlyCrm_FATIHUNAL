@@ -19,6 +19,7 @@ public class PollPageStepsDefs extends BasePage {
 
      @When("the user should click the poll button")
     public void theUserShouldClickThePollButton() {
+       BrowserUtils.waitFor(2);
         pollPage.pollBtn.click();
     }
 

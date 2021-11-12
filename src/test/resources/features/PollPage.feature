@@ -22,7 +22,7 @@
       And the user clicks the third user
       Then clicked users are seen in the receiver box filed
 
-
+    @aaa
       Scenario: attach a link by clicking on the link icon
 
         Then  the user clicks the link icon
@@ -31,7 +31,7 @@
         And   the user clicks the Save button
         Then  link text is seen in the message field
 
-    @poll
+    @wip
       Scenario:  add the mention by clicking the add mention icon
 
         When  the user clicks Add mention icon
