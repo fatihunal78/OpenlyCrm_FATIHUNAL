@@ -138,7 +138,7 @@ public class PollPageStepsDefs extends BasePage {
 
          String actualText= pollPage.AttachedText.getText();
 
-         Assert.assertEquals(expectedText,actualText);
+         Assert.assertEquals("NOT matched",expectedText,actualText);
 
 
         System.out.println("pollPage.AttachedText.getText() = " + pollPage.AttachedText.getText());
