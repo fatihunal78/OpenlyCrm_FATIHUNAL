@@ -126,6 +126,7 @@ public class PollPageStepsDefs extends BasePage {
 
     @And("the user clicks the SEND button")
     public void theUserClicksTheSENDButton() {
+
          pollPage.SendBtn.click();
 
 
@@ -143,6 +144,7 @@ public class PollPageStepsDefs extends BasePage {
 
         System.out.println("pollPage.AttachedText.getText() = " + pollPage.AttachedText.getText());
     }
+
 
 
 }

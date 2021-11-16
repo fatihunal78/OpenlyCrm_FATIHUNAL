@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PollPage extends BasePage {
+public class PollPage extends BasePage{
 
 
     @FindBy(id = "feed-add-post-form-tab-vote")
@@ -31,7 +31,6 @@ public class PollPage extends BasePage {
 
     @FindBy(xpath = "(//a[@class='bx-finder-company-department-employee  bx-finder-element'])[4]")
     public WebElement thirdUser;
-
 
     @FindBy(id = "feed-add-post-destination-item")
     public WebElement receiverBox;

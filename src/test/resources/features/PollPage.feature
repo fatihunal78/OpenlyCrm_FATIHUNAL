@@ -5,12 +5,12 @@
 
    Background:
         Given the user is on the login page
-        When the user enters by using "helpdesk76@cybertekschool.com" and "UserUser"
+        When the user enters by using "helpdesk86@cybertekschool.com" and "UserUser"
         Then the user should be on the home page
         Then the user should click the poll button
 
 
-    @wip
+
     Scenario: Add users by selecting multiple contacts from Employee and Departments contact lists
 
       Then the user clicks the Add More button
@@ -22,7 +22,7 @@
       And the user clicks the third user
       Then clicked users are seen in the receiver box filed
 
-    @wip
+
       Scenario: attach a link by clicking on the link icon
 
         Then  the user clicks the link icon
@@ -32,7 +32,7 @@
         And   the user clicks the SEND button
         Then  link text is seen on the Active Stream page
 
-    @wip
+
       Scenario:  add the mention by clicking the add mention icon
 
         When  the user clicks Add mention icon
@@ -46,22 +46,22 @@
         And the user selects the third user
         Then clicked users are seen in the receiver box filed
 
+
+    @Wip
         Scenario: add questions and multiple answers
 
-
-          When  nine the user writes a question in the Question box
-          And the user writes an answer in the Answer 1 box
-          And the user writes another answer in the Answer 2 box
-          And the user writes another answer in the Answer 3 box
+          When the user writes a question in the Question box
+          And the user writes an answer in the Answer one box
+          And the user writes another answer in the Answer two box
+          And the user writes another answer in the Answer three box
           And the user clicks the add question button
-          And the user writes a question in the new Question box
-          And the user writes an answer in the new Answer 1 box
-          And the user writes another answer in the new Answer 2 box
-          And the user writes another answer in the new Answer 3 box
+          And the user writes a question in the second Question box
+          And the user writes an answer in the new Answer one box
+          And the user writes another answer in the new Answer two box
+          And the user writes another answer in the new Answer three box
           And the user writes a message in the message box
-          And the user clicks the Send button
+          And   the user clicks the SEND button
           Then the user see the questions and answers on the home page
-
 
 
 

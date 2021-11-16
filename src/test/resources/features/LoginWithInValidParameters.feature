@@ -27,3 +27,7 @@ Feature: Login with in valid credentials
   Scenario: Login with different valid credentials
     When the user enters by using "  helpdesk79@cybertekschool.com  " and "    "
     Then the should not be on home page
+
+  Scenario: Login with different valid credentials
+    When the user enters by using " ali    " and " veli   "
+    Then the should not be on home page
