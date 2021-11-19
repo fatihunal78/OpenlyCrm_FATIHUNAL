@@ -1,7 +1,5 @@
-package com.EU6GR4_AY.pages;
+package com.EU6GR4_FATIH.pages;
 
-import com.EU6GR4_AY.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

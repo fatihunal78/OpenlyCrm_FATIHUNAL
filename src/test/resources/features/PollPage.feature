@@ -14,8 +14,8 @@
     Scenario: Add users by selecting multiple contacts from Employee and Departments contact lists
 
       Then the user clicks the Add More button
-      And  the user clicks the Employees and departments
-      And  the user clicks the new department's name
+      And the user clicks the Employees and departments
+      And the user clicks the new department's name
       And the user clicks the All department and subdepartment employees
       And the user clicks the first user
       And the user clicks the second user
@@ -25,18 +25,18 @@
 
       Scenario: attach a link by clicking on the link icon
 
-        Then  the user clicks the link icon
-        And   the user writes the link text in the Text box
-        And   the user writes the link url in the Link box
-        And   the user clicks the Save button
-        And   the user clicks the SEND button
-        Then  link text is seen on the Active Stream page
+        Then the user clicks the link icon
+        And the user writes the link text in the Text box
+        And the user writes the link url in the Link box
+        And the user clicks the Save button
+        And the user clicks the SEND button
+        Then link text is seen on the Active Stream page
 
 
-      Scenario:  add the mention by clicking the add mention icon
+      Scenario: add the mention by clicking the add mention icon
 
-        When  the user clicks Add mention icon
-        And  the user clicks the Employees and departments
+        When the user clicks Add mention icon
+        And the user clicks the Employees and departments
         And the user selects the first user
         And the user clicks Add mention icon
         And the user clicks the Employees and departments
@@ -46,9 +46,7 @@
         And the user selects the third user
         Then clicked users are seen in the receiver box filed
 
-
-    @Wip
-        Scenario: add questions and multiple answers
+      Scenario: add questions and multiple answers
 
           When the user writes a question in the Question box
           And the user writes an answer in the Answer one box
@@ -60,7 +58,7 @@
           And the user writes another answer in the new Answer two box
           And the user writes another answer in the new Answer three box
           And the user writes a message in the message box
-          And   the user clicks the SEND button
+          And the user clicks the SEND button
           Then the user see the questions and answers on the home page
 
 

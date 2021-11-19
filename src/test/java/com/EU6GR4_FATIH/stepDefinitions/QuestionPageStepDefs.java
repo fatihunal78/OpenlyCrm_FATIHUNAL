@@ -1,15 +1,11 @@
-package com.EU6GR4_AY.stepDefinations;
+package com.EU6GR4_FATIH.stepDefinitions;
 
-import com.EU6GR4_AY.pages.BasePage;
-import com.EU6GR4_AY.pages.QuestionPage;
-import com.EU6GR4_AY.utilities.Driver;
+import com.EU6GR4_FATIH.pages.BasePage;
+import com.EU6GR4_FATIH.pages.QuestionPage;
+import com.EU6GR4_FATIH.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class QuestionPageStepDefs extends BasePage {
 
@@ -82,6 +78,7 @@ public class QuestionPageStepDefs extends BasePage {
 
         Driver.get().switchTo().frame(questionPage.MsgBoxiframe);
         questionPage.MsgBox.sendKeys("Misson Complited");
+        Driver.get().switchTo().defaultContent();
 
     }
 

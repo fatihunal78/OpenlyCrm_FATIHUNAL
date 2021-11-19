@@ -1,4 +1,4 @@
-package com.EU6GR4_AY.runners;
+package com.EU6GR4_FATIH.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
                     "html:target/default-html-reports",
                     "rerun:target/rerun.txt"},
             features = "src/test/resources/features",
-            glue = "com/EU6GR4_AY/stepDefinations",
+            glue = "com/EU6GR4_FATIH/stepDefinitions",
             dryRun = false,
-            tags ="@Wip"
+            tags ="@wip"
     )
     public class CukesRunner {
     }

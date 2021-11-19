@@ -1,10 +1,10 @@
-package com.EU6GR4_AY.stepDefinations;
+package com.EU6GR4_FATIH.stepDefinitions;
 
-import com.EU6GR4_AY.pages.BasePage;
-import com.EU6GR4_AY.pages.LoginPage;
-import com.EU6GR4_AY.utilities.BrowserUtils;
-import com.EU6GR4_AY.utilities.ConfigurationReader;
-import com.EU6GR4_AY.utilities.Driver;
+import com.EU6GR4_FATIH.pages.BasePage;
+import com.EU6GR4_FATIH.pages.LoginPage;
+import com.EU6GR4_FATIH.utilities.BrowserUtils;
+import com.EU6GR4_FATIH.utilities.ConfigurationReader;
+import com.EU6GR4_FATIH.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,7 +30,7 @@ public class LoginStepDefs extends BasePage {
    public void the_user_should_be_on_the_home_page() {
         String expectedTitle = "Portal";
         System.out.println("expectedTitle = " + expectedTitle);
-        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
+        System.out.println("actualTitle = " + Driver.get().getTitle());
         BrowserUtils.waitFor(2);
         Assert.assertTrue(Driver.get().getTitle().contains(expectedTitle));
 
@@ -41,11 +41,11 @@ public class LoginStepDefs extends BasePage {
         loginPage.login(Username, Password);
     }
 
-    @Then("the should not be on home page")
+    @Then("the user should not be on home page")
     public void theShouldNotBeOnHomePage() {
         String expectedTitle = "Portal";
         System.out.println("expectedTitle = " + expectedTitle);
-        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
+        System.out.println("actualTitle = " + Driver.get().getTitle());
         BrowserUtils.waitFor(2);
         Assert.assertFalse(Driver.get().getTitle().contains(expectedTitle));
 

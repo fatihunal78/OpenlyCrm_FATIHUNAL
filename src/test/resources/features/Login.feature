@@ -10,6 +10,7 @@ Feature: Login  As a user should be able to login
       | hr91@cybertekschool.com        | UserUser |
       | helpdesk99@cybertekschool.com  | UserUser |
       | marketing91@cybertekschool.com | UserUser |
+      | marketing99@cybertekschool.com | UserUser |
 
 
 

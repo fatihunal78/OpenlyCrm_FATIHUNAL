@@ -1,7 +1,6 @@
-package com.EU6GR4_AY.stepDefinations;
+package com.EU6GR4_FATIH.stepDefinitions;
 
-import com.EU6GR4_AY.utilities.Driver;
-import com.EU6GR4_AY.utilities.Driver;
+import com.EU6GR4_FATIH.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -26,7 +25,7 @@ public class Hooks {
             scenario.attach(screenshot,"image/png","screenshot");
         }
 
-        Driver.closeDriver();
+        //Driver.closeDriver();
 
     }
     @Before("@abc")

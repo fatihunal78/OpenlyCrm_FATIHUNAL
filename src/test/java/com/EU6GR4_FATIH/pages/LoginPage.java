@@ -1,23 +1,24 @@
-package com.EU6GR4_AY.pages;
+package com.EU6GR4_FATIH.pages;
 
-import com.EU6GR4_AY.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
 
-    @FindBy(name = "USER_LOGIN" )
+    @FindBy(xpath = "//input[@type='text']")
     public WebElement username;
 
-    @FindBy(name = "USER_PASSWORD")
+    @FindBy(xpath = "//input[@type='password']")
     public WebElement password;
 
-    @FindBy(className = "login-btn")
+    @FindBy(xpath = "//input[@type='submit']")
     public WebElement loginButton;
 
-    @FindBy(xpath = "/html/head/title[contains(text(),'Portal')]")
-    public WebElement actualTitle;
+    @FindBy(xpath = "//a[@class='login-link-forgot-pass']")
+    public WebElement forgotPassword;
+
+    @FindBy(xpath = "//div[@class='log-popup-header']")
+    public WebElement authorization;
 
     public void login(String userName,String passWord){
         username.sendKeys(userName);

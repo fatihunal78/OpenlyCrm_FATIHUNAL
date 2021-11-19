@@ -1,4 +1,4 @@
-package com.EU6GR4_AY.utilities;
+package com.EU6GR4_FATIH.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

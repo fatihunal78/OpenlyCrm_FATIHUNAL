@@ -1,21 +1,13 @@
-package com.EU6GR4_AY.stepDefinations;
+package com.EU6GR4_FATIH.stepDefinitions;
 
-import com.EU6GR4_AY.pages.BasePage;
-import com.EU6GR4_AY.pages.LoginPage;
-import com.EU6GR4_AY.pages.PollPage;
-import com.EU6GR4_AY.utilities.BrowserUtils;
-import com.EU6GR4_AY.utilities.ConfigurationReader;
-import com.EU6GR4_AY.utilities.Driver;
+import com.EU6GR4_FATIH.pages.BasePage;
+import com.EU6GR4_FATIH.pages.PollPage;
+import com.EU6GR4_FATIH.utilities.BrowserUtils;
+import com.EU6GR4_FATIH.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -126,10 +118,7 @@ public class PollPageStepsDefs extends BasePage {
 
     @And("the user clicks the SEND button")
     public void theUserClicksTheSENDButton() {
-
          pollPage.SendBtn.click();
-
-
     }
 
     @Then("link text is seen on the Active Stream page")
@@ -144,7 +133,6 @@ public class PollPageStepsDefs extends BasePage {
 
         System.out.println("pollPage.AttachedText.getText() = " + pollPage.AttachedText.getText());
     }
-
 
 
 }

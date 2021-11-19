@@ -1,4 +1,4 @@
-package com.EU6GR4_AY.utilities;
+package com.EU6GR4_FATIH.utilities;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
